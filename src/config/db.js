@@ -25,6 +25,10 @@ const pool = process.env.DATABASE_URL
 
 pool.on('connect', () => console.log('✅ Connected to PostgreSQL'));
 pool.on('error', (err) => console.error('❌ PostgreSQL error', err));
+console.log("--- DEBUG DATABASE ---");
+console.log("DATABASE_URL présente ?", process.env.DATABASE_URL ? "OUI" : "NON");
+console.log("Valeur brute :", process.env.DATABASE_URL);
+console.log("------------------------");
 
 // 🔹 EXPORT DIRECT
 module.exports = pool;
