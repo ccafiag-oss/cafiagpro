@@ -1,0 +1,114 @@
+postgres
+
+///  PLANIFIER SAUVEGARDE AUTO
+npm install node-cron
+
+//// FIN INTALATION
+
+///   IA  RECONNAISANCE FACIAL  POUR WINDWSE
+npm install @vladmandic/face-api @tensorflow/tfjs @napi-rs/canvas  
+npm install @tensorflow/tfjs-backend-wasm
+
+///////
+
+mkdir sdgcreditvente
+cd sdgcreditvente
+npm init -y
+npm install express pg
+
+
+npm install pg dotenv
+
+npm install multer
+npm install cors
+npm install winston
+npm install cors
+npm install jsonwebtoken
+npm install morgan --save
+npm install pg csv-parser
+npm install socket.io
+
+pm2 stop servercafiagcreditvente.js
+
+pm2 start servercafiagcreditvente.js
+
+node servercafiagcreditvente.js
+
+pm2 logs servercafiagcreditvente
+
+
+pm2 save
+
+pm2 startup windows
+
+
+
+
+
+pm2 stop all
+pm2 delete all
+pm2 flush
+pm2 list
+pm2 start servercafiagcreditvente.js
+
+pm2 restart servercafiagcreditvente.js
+
+
+pm2 save
+
+pm2 startup windows
+
+
+
+pm2 start servercafiagcreditvente.js --name cafiag_creditvente
+pm2 start servercafiagagrosante.js --name cafiag_agrosante
+
+pm2 save
+
+pm2 startup windows
+
+
+
+start nginx
+
+
+nginx -s reload
+
+
+nginx -s quit
+
+
+nginx -s stop
+
+
+nginx -s stop
+start nginx
+
+
+
+android_intent_plus
+permission_handler
+
+shared_preferences
+url_launcher
+http
+intl
+google_fonts
+
+curl -X POST http://localhost:5265/api/tinfos \
+  -F "produit=Ordinateur HP" \
+  -F "photos=@C:/img1.png" \
+  -F "photos=@C:/img2.png" \
+  -F "photos=@C:/img3.png"
+
+http://localhost:5265/api/agences
+
+http://localhost:5265/api/compte-tiers/insert
+
+
+http://localhost:5265/api/operation/generate/1/A/false/false/false/0/true";
+
+http://localhost:5265/api/echeance?idclients=15
+
+
+http://localhost:5265/api/echeance?idclients=15

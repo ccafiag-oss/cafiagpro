@@ -1,0 +1,16 @@
+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
+
+
+
+https://openrouter.ai/workspaces/default/keys?utm_source=signup-success
+
+adresse sit
+https://platform.openai.com/home
+
+
+code  necessaire
+
+
+npm install openai express pg dotenv cors
+
+npm install express cors dotenv openai pg

@@ -1,0 +1,112 @@
+69.197.174.61
+
+**********************************************
+***  donneez un nom au service ***
+sudo nano /etc/systemd/system/cafiag_test.service
+
+********************************************************
+******* coler ces chemins vers les dossiers *******************
+
+[Unit]
+Description=Mon Application Node.js
+After=network.target
+
+[Service]
+User=cafiag
+WorkingDirectory=/home/cafiag/Documents/CAFIAG/API/cafiag_test/sdgcreditvente26aout2026
+ExecStart=/usr/bin/node servercafiagcreditvente.js
+Restart=always
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+
+
+***************************************************************************
+
+****  enregistre le chemin ***** ************************************
+
+Enregistrez (Ctrl + O, puis Entrée) et quittez (Ctrl + X).
+
+***************************************************************************
+
+*********** demarrer  le service *******
+sudo systemctl daemon-reload
+sudo systemctl enable cafiag_test
+sudo systemctl start cafiag_test
+
+*****************************************************************************
+
+***** relancer le service *******
+sudo systemctl daemon-reload
+sudo systemctl restart cafiag_test
+sudo systemctl status cafiag_test
+
+
+**********************************************************************
+******* Verifier l'etat du service ***------------------
+
+sudo systemctl status cafiag_test
+
+*****************************************************************************
+******* pour voir les logs du service ********
+
+sudo journalctl -u cafiag_test -e
+
+**************************************************************************************
+
+***** Pour corriger Le dossier du projet faite avec windwse sur vps ubutu ****
+
+*************** Rendez-vous dans le dossier de votre projet :***
+cd /home/cafiag/Documents/CAFIAG/API/cafiag_test/sdgcreditvente26aout2026
+
+****************************************************************************************
+
+*****  Supprimez le dossier node_modules existant ainsi que le fichier de cache******
+
+rm -rf node_modules package-lock.json
+
+************************************************************************************
+
+**************Réinstallez les modules (ce qui téléchargera et compilera les binaires adaptés à votre VPS Ubuntu) : ***************
+npm install
+
+*********************************************************************************************************************************
+
+*****Une fois l'installation terminée, redémarrez votre service systemd :**********
+**********************************
+******************************************
+sudo systemctl restart cafiag_test
+**************Vérifiez ensuite que tout fonctionne avec :*************************
+
+*************************************
+sudo systemctl status cafiag_test
+
+****************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
